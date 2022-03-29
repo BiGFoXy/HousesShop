@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
     mode: 'development',
     entry: { 
-        'index': path.resolve(__dirname, 'src/page_building/js/index.js'),
+        'index': path.resolve(__dirname, 'src/index.js'),
     },
     output: { 
         path: path.resolve(__dirname, 'dist'),
@@ -16,9 +16,9 @@ module.exports = {
     devtool: 'source-map',
     devServer: {
         static: {
-            directory: path.resolve(__dirname, 'dist'),
+            directory: path.resolve(__dirname, 'src'),
         },
-        port: 8080,
+        port: 5500,
         open: true,
         hot: true,
         compress: true,
@@ -29,7 +29,9 @@ module.exports = {
             {
                 test:/\.s[ac]ss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader,
+                    process.env.NODE_ENV !== "production"
+                    ? "style-loader"
+                    : MiniCssExtractPlugin.loader,
                     'css-loader',
                     'sass-loader',
                 ]
@@ -51,13 +53,13 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: "[name].css",
+        }),
         new HtmlWebpackPlugin({
             title: 'Дома под ключ',
             filename: 'index.html',
             template: 'src/template.html',
         }),
-        new MiniCssExtractPlugin({
-            filename: "[name].css",
-        }),
-    ]
+    ],
 }
