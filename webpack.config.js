@@ -1,17 +1,46 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const to_pages = ["Index", "Sergey"];
+
+const generateHtmlPlugin = (title) => {
+    return new HtmlWebpackPlugin({
+      title,
+      filename: `${title.toLowerCase()}/${title.toLowerCase()}.html`,
+      template: `./src/pages/${title.toLowerCase()}/index.html`,
+      chunks: [title.toLowerCase()],
+    });
+}
+  
+const populateHtmlPlugins = (pagesArray) => {
+    res = [];
+    pagesArray.forEach(page => {
+      res.push(generateHtmlPlugin(page));
+    })
+    return res;
+}
+
+const populateEntryPoints = (pointsArray) => {
+    res = {};
+    pointsArray.forEach(point => {
+        res[point] = path.resolve(__dirname, `src/pages/${point}/index.js`);
+    });
+    return res;
+}
+
+const pages = populateHtmlPlugins(to_pages);
+const points = populateEntryPoints(to_pages.map(element => {
+    return element.toLowerCase();
+}))
 
 module.exports = {
     mode: 'development',
-    entry: { 
-        'index': path.resolve(__dirname, 'src/index.js'),
-    },
+    entry: points,
     output: { 
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name].[contenthash].js',
+        filename: '[name]/[name].[contenthash].js',
         clean: true,
-        assetModuleFilename: '[name][ext]',
+        assetModuleFilename: 'img/[name][ext]',
     },
     devtool: 'source-map',
     devServer: {
@@ -54,12 +83,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name].css",
+            filename: "[name]/[name].css",
         }),
-        new HtmlWebpackPlugin({
-            title: 'Дома под ключ',
-            filename: 'index.html',
-            template: 'src/template.html',
-        }),
-    ],
+
+    ].concat(pages),
 }
