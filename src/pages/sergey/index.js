@@ -1,2 +1,2 @@
 import './index.scss'
-import '../../assets/sergey/d.jpg'
+import './assets/d.jpg'

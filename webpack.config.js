@@ -40,7 +40,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name]/[name].[contenthash].js',
         clean: true,
-        assetModuleFilename: 'img/[name][ext]',
     },
     devtool: 'source-map',
     devServer: {
@@ -51,7 +50,11 @@ module.exports = {
         open: true,
         hot: true,
         compress: true,
-        historyApiFallback: true,
+        historyApiFallback: {
+            rewrites: [
+                {from: /./, to:'/index/index.html'}
+            ]
+        },
     },
     module: {
         rules: [
@@ -78,7 +81,17 @@ module.exports = {
             {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
                 type: 'asset/resource',
-            }
+                generator : {
+                    filename : 'img/[name][ext]',
+                }
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: 'asset/resource',
+                generator : {
+                    filename : 'fonts/[name][ext]',
+                }
+            },
         ]
     },
     plugins: [
