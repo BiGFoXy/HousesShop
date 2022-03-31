@@ -528,76 +528,6 @@ function styleTagTransform(css, styleElement) {
 
 module.exports = styleTagTransform;
 
-/***/ }),
-
-/***/ "./src/pages/index/assets/clock.svg":
-/*!******************************************!*\
-  !*** ./src/pages/index/assets/clock.svg ***!
-  \******************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/clock.svg";
-
-/***/ }),
-
-/***/ "./src/pages/index/assets/envelope.svg":
-/*!*********************************************!*\
-  !*** ./src/pages/index/assets/envelope.svg ***!
-  \*********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/envelope.svg";
-
-/***/ }),
-
-/***/ "./src/pages/index/assets/logo.svg":
-/*!*****************************************!*\
-  !*** ./src/pages/index/assets/logo.svg ***!
-  \*****************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/logo.svg";
-
-/***/ }),
-
-/***/ "./src/pages/index/assets/phoneIcon.svg":
-/*!**********************************************!*\
-  !*** ./src/pages/index/assets/phoneIcon.svg ***!
-  \**********************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/phoneIcon.svg";
-
-/***/ }),
-
-/***/ "./src/pages/index/assets/vk.svg":
-/*!***************************************!*\
-  !*** ./src/pages/index/assets/vk.svg ***!
-  \***************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/vk.svg";
-
-/***/ }),
-
-/***/ "./src/pages/index/assets/wa.svg":
-/*!***************************************!*\
-  !*** ./src/pages/index/assets/wa.svg ***!
-  \***************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/wa.svg";
-
-/***/ }),
-
-/***/ "./src/pages/index/assets/yt.svg":
-/*!***************************************!*\
-  !*** ./src/pages/index/assets/yt.svg ***!
-  \***************************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-module.exports = __webpack_require__.p + "img/yt.svg";
-
 /***/ })
 
 /******/ 	});
@@ -651,18 +581,6 @@ module.exports = __webpack_require__.p + "img/yt.svg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/global */
-/******/ 	(() => {
-/******/ 		__webpack_require__.g = (function() {
-/******/ 			if (typeof globalThis === 'object') return globalThis;
-/******/ 			try {
-/******/ 				return this || new Function('return this')();
-/******/ 			} catch (e) {
-/******/ 				if (typeof window === 'object') return window;
-/******/ 			}
-/******/ 		})();
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
@@ -679,26 +597,6 @@ module.exports = __webpack_require__.p + "img/yt.svg";
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		var scriptUrl;
-/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
-/******/ 		var document = __webpack_require__.g.document;
-/******/ 		if (!scriptUrl && document) {
-/******/ 			if (document.currentScript)
-/******/ 				scriptUrl = document.currentScript.src
-/******/ 			if (!scriptUrl) {
-/******/ 				var scripts = document.getElementsByTagName("script");
-/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
-/******/ 			}
-/******/ 		}
-/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
-/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
-/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
-/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
-/******/ 		__webpack_require__.p = scriptUrl + "../";
-/******/ 	})();
-/******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
@@ -708,23 +606,9 @@ var __webpack_exports__ = {};
   \**********************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.scss */ "./src/pages/index/index.scss");
-/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/logo.svg */ "./src/pages/index/assets/logo.svg");
-/* harmony import */ var _assets_phoneIcon_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/phoneIcon.svg */ "./src/pages/index/assets/phoneIcon.svg");
-/* harmony import */ var _assets_clock_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/clock.svg */ "./src/pages/index/assets/clock.svg");
-/* harmony import */ var _assets_envelope_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./assets/envelope.svg */ "./src/pages/index/assets/envelope.svg");
-/* harmony import */ var _assets_vk_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./assets/vk.svg */ "./src/pages/index/assets/vk.svg");
-/* harmony import */ var _assets_yt_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./assets/yt.svg */ "./src/pages/index/assets/yt.svg");
-/* harmony import */ var _assets_wa_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./assets/wa.svg */ "./src/pages/index/assets/wa.svg");
-
-
-
-
-
-
-
 
 })();
 
 /******/ })()
 ;
-//# sourceMappingURL=index.3843224774fa48f22823.js.map
+//# sourceMappingURL=index.773374e9dc62b3fca222.js.map
