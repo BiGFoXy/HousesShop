@@ -6,6 +6,197 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-    
+    <div class="main">
+        <div class="main__index">
+            <h1>Дома под ключ</h1>
+            <p>Строительство деревянных домов и бань в Нижнем Новгороде</p>
+            <p class="index__floating-text">Качественная обработка и не высокая цена <br> это реально</p>
+            <ul class="index__features-list">
+                <li>Экологичность</li>
+                <li>Постоянная актуальность</li>
+                <li>Доступные цены</li>
+                <img class="index__arrow" src=<%=require("./assets/arrow.svg") %> alt="arrow">
+            </ul>
+            <img class="index__logo" src=<%=require("./assets/logo.png") %> alt="logo">
+            <img class="index__log" src=<%=require("./assets/log.png") %> alt="log">
+            <div class="index__social-networks">
+                <img src=<%=require("./assets/vk-logo.svg") %> alt="vk">
+                <img src=<%=require("./assets/youtube-logo.svg") %> alt="youtube">
+                <img src=<%=require("./assets/whatsapp-logo.svg") %> alt="whatsapp">
+            </div>
+        </div>
+        <div class=main__examples>
+            <h2>Наши объекты строительства домов под ключ</h2>
+            <a class="examples__link-all"href="#">Смотреть все</a>
+            <div class="examples__house-card-list">
+                <div class="examples__house-card">
+                    <img src=<%=require("./assets/house_1.png")%> alt="house_1">
+                    <h4>Деревянный дом с мансардой</h4>
+                    <p>Диаметр бревна 220мм, дом 10х10, ленточный фундамент, балкон, входная группа с козырьком.</p>
+                    <a href="#" class="examples__link-more">
+                        Подробнее
+                        <img src=<%=require("./assets/arrow_horizontal.svg")%> alt="arrow-horizontal">
+                    </a>
+                </div>
+                <div class="examples__house-card promo">
+                    <img src=<%=require("./assets/house_2.png")%> alt="house_2">
+                    <h4>2-х этажный дом-баня-гараж</h4>
+                    <p>Дом из бревна размеры 9х7, диаметр бревна 200мм, крытый балкон,гараж 3х7</p>
+                    <a href="#" class="examples__link-more">
+                        Подробнее
+                        <img src=<%=require("./assets/arrow_horizontal.svg")%> alt="arrow-horizontal">
+                    </a>
+                </div>
+                <div class="examples__house-card">
+                    <img src=<%=require("./assets/house_3.png")%> alt="house_3">
+                    <h4>Деревянный дом скандинавский</h4>
+                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    <a href="#" class="examples__link-more">
+                        Подробнее
+                        <img src=<%=require("./assets/arrow_horizontal.svg")%> alt="arrow-horizontal">
+                    </a>
+                </div>
+                <div class="examples__house-card">
+                    <img src=<%=require("./assets/house_4.png")%> alt="house_4">
+                    <h4>Деревянный дом с мансардой</h4>
+                    <p>Диаметр бревна 220мм, дом 10х10, ленточный фундамент, балкон, входная группа с козырьком.</p>
+                    <a href="#" class="examples__link-more">
+                        Подробнее
+                        <img src=<%=require("./assets/arrow_horizontal.svg")%> alt="arrow-horizontal">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="main__about">
+            <h2>О компании</h2>
+            <div class="about__container">
+                <div class="text">
+                    <p>
+                        ООО “Именитая изба” занимается профессиональным
+                        строительством деревянных домов и бань более 10 лет. 
+                        Наша главная задача – построить для Вас теплые и уютные
+                        дома под ключ и недорого, которые простоят более 100 лет.
+                    </p>
+                    <p>
+                        А так же занимаемся оптовыми продажами пиломатериала
+                        и домокоплектов из бревна и бруса. К нам можно
+                        обратиться даже если достаточной суммы для
+                        строительства дома нет, а он нужен срочно и дело не терпит
+                        отлагательств.
+                    </p>
+                    <a href="#" class="examples__link-more">
+                        Подробнее
+                        <img src=<%=require("./assets/arrow_horizontal.svg")%> alt="arrow-horizontal">
+                    </a>
+                </div>
+                <div class="about__images">
+                    <img src=<%=require("./assets/about-image.png")%> alt="about-image">
+                    <div class="about__image-selector-container">
+                        <input type="radio" name="about__image-selector" checked>
+                        <input type="radio" name="about__image-selector">
+                        <input type="radio" name="about__image-selector">
+                        <input type="radio" name="about__image-selector">
+                    </div>
+                </div>
+                <div class="about__video">
+                    <img src=<%=require("./assets/about-video.png")%> alt="about-video">
+                </div>
+                <div class="about__text-2">
+                    <h3>Почему строят комбинированные дома?</h3>
+                    <p>
+                        Все просто: сочетание кирпича и дерева — отличное решение, 
+                        удобство для владельцев, так как основание дома выполнено из кирпичных
+                        стен, а второй этаж выполнен  из бревна и бруса. Главное отличие
+                        такого дома – огромная крыша с широкими карнизами, большой 
+                        выпуск кровли над балконами и верандами. Строительство такого 
+                        дома считается одним из самых практичных вариантов жилья,
+                        создает комфортный и мягкий микроклимат. Мы предлагаем опыт 
+                        и интересные проектные решения  под ключ недорого в разных
+                        вариациях.
+                    </p>
+                </div>
+            </div> 
+        </div>
+        <div class="main__contact">
+            <div class=contact__form-container>
+                <h2>Если у вас остались вопросы, напишите нам:</h2>
+                <form action="#" method="POST"">
+                    <div class="contact__form-field">
+                        <label for="name">
+                            Ваше имя
+                        </label>
+                        <input type="text" name="name" id="name" placeholder="Иван">
+                    </div>
+                    <div class="contact__form-field">
+                        <label for="number">
+                            Ваш телефон
+                        </label>
+                        <input type="tel" name="number" id="number" placeholder="8 800 000 00 00">
+                    </div>
+                    <div class="contact__form-field">
+                        <input type="checkbox" name="check" id="check" checked>
+                        <label for="check">
+                            Даю согласие на обработку персональных данных
+                        </label>
+                    </div>
+                    <button type="submit">
+                        Получить консультацию
+                    </button>
+                    <div class="contact__info">
+                        В течении 30 минут, мы свяжемся с вами и поможем их решить
+                    </div>
+                </form>  
+            </div>
+            <div class="contact__image">
+                <img src=<%=require("./assets/contact-image.png")%> alt="contact-image">
+            </div>
+        </div>
+        <div class="main__advantages">
+            <h2>Преимущества строительства деревянных домов под ключ у нас</h2>
+            <dl class="advantages__list">
+                <div class="advantages__list-item">
+                    <dt>300+ <br> Домов</dt>
+                    <dd>Мы строим по всей территории России и по праву можем назвать себя профессионалами своего дела.</dd>
+                </div>
+                <div class="advantages__list-item"></div>
+                    <dt>Команда <br> мастеров</dt>
+                    <dd>Наш менеджер никогда не предложит купить то, что Вам не нужно или не подходит.</dd>
+                </div>
+                <div class="advantages__list-item"></div>
+                    <dt>Точные <br> цены</dt>
+                    <dd>Они ни при каких обстоятельствах не изменяются, т.к не зависят ни от курса доллара, ни от курса евро.</dd>
+                </div>
+                <div class="advantages__list-item"></div>
+                    <dt>Индивидуальное <br> проектирование</dt>
+                    <dd>Вы можете прислать нам на расчет свои проекты — мы учтем все Ваши пожелания и просьбы.</dd>
+                </div>
+            </dl>
+        </div>
+        <div class="main__reviews">
+            <h2>Видеоотзывы благодарных клиентов</h2>
+            <div class="reviews__list">
+                <div class="reviews__list-item">
+                    <img src=<%=require("./assets/review_1.png")%> alt="review-1">
+                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
+                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                </div>
+                <div class="reviews__list-item">
+                    <img src=<%=require("./assets/review_2.png")%> alt="review-2">
+                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
+                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                </div>
+                <div class="reviews__list-item">
+                    <img src=<%=require("./assets/review_1.png")%> alt="review-3">
+                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
+                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                </div>
+                <div class="reviews__list-item">
+                    <img src=<%=require("./assets/review_2.png")%> alt="review-4">
+                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
+                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
