@@ -1,7 +1,7 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const to_pages = ["Index"];
+const to_pages = ["Index", "UI"];
 
 const generateHtmlPlugin = (title) => {
     return new HtmlWebpackPlugin({
