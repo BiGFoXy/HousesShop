@@ -1,35 +1,10 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const pagesModule = require("./utils/pages.js")
 const to_pages = ["Index", "Maximum_Negative"];
 
-const generateHtmlPlugin = (title) => {
-    return new HtmlWebpackPlugin({
-      title,
-      filename: `${title.toLowerCase()}/${title.toLowerCase()}.html`,
-      template: `./src/pages/${title.toLowerCase()}/index.html`,
-      chunks: [title.toLowerCase()],
-    });
-}
-  
-const populateHtmlPlugins = (pagesArray) => {
-    res = [];
-    pagesArray.forEach(page => {
-      res.push(generateHtmlPlugin(page));
-    })
-    return res;
-}
-
-const populateEntryPoints = (pointsArray) => {
-    res = {};
-    pointsArray.forEach(point => {
-        res[point] = path.resolve(__dirname, `src/pages/${point}/index.js`);
-    });
-    return res;
-}
-
-const pages = populateHtmlPlugins(to_pages);
-const points = populateEntryPoints(to_pages.map(element => {
+const pages = pagesModule.populateHtmlPlugins(to_pages);
+const points = pagesModule.populateEntryPoints(to_pages.map(element => {
     return element.toLowerCase();
 }))
 
