@@ -7,28 +7,30 @@
 </head>
 <body>
     <div class="main">
-        <div class="main__index">
-            <h1>Дома под ключ</h1>
-            <p>Строительство деревянных домов и бань в Нижнем Новгороде</p>
+        <div class="index">
+            <h1>Дома <br> под ключ</h1>
+            <p class="index__description">Строительство деревянных домов и бань в Нижнем Новгороде</p>
             <p class="index__floating-text">Качественная обработка и не высокая цена <br> это реально</p>
             <ul class="index__features-list">
                 <li>Экологичность</li>
                 <li>Постоянная актуальность</li>
                 <li>Доступные цены</li>
-                <img class="index__arrow" src=<%=require("./assets/arrow.svg") %> alt="arrow">
+                <div class="index__arrow-container">
+                    <img class="index__arrow" src=<%=require("./assets/arrow.svg") %> alt="arrow">
+                </div>
             </ul>
             <img class="index__logo" src=<%=require("./assets/logo.png") %> alt="logo">
             <img class="index__log" src=<%=require("./assets/log.png") %> alt="log">
-            <div class="index__social-networks">
+            <div class="index__social">
                 <img src=<%=require("./assets/vk-logo.svg") %> alt="vk">
                 <img src=<%=require("./assets/youtube-logo.svg") %> alt="youtube">
                 <img src=<%=require("./assets/whatsapp-logo.svg") %> alt="whatsapp">
             </div>
         </div>
-        <div class=main__examples>
+        <div class="examples">
             <h2>Наши объекты строительства домов под ключ</h2>
             <a class="examples__link-all"href="#">Смотреть все</a>
-            <div class="examples__house-card-list">
+            <div class="examples__house-cards-container">
                 <div class="examples__house-card">
                     <img src=<%=require("./assets/house_1.png")%> alt="house_1">
                     <h4>Деревянный дом с мансардой</h4>
@@ -67,16 +69,17 @@
                 </div>
             </div>
         </div>
-        <div class="main__about">
+        <div class="about">
             <h2>О компании</h2>
             <div class="about__container">
-                <div class="text">
+                <div class="about__text">
                     <p>
                         ООО “Именитая изба” занимается профессиональным
                         строительством деревянных домов и бань более 10 лет. 
                         Наша главная задача – построить для Вас теплые и уютные
                         дома под ключ и недорого, которые простоят более 100 лет.
                     </p>
+                    <br>
                     <p>
                         А так же занимаемся оптовыми продажами пиломатериала
                         и домокоплектов из бревна и бруса. К нам можно
@@ -84,7 +87,7 @@
                         строительства дома нет, а он нужен срочно и дело не терпит
                         отлагательств.
                     </p>
-                    <a href="#" class="examples__link-more">
+                    <a href="#" class="about__link-more">
                         Подробнее
                         <img src=<%=require("./assets/arrow_horizontal.svg")%> alt="arrow-horizontal">
                     </a>
@@ -117,85 +120,101 @@
                 </div>
             </div> 
         </div>
-        <div class="main__contact">
-            <div class=contact__form-container>
-                <h2>Если у вас остались вопросы, напишите нам:</h2>
-                <form action="#" method="POST"">
-                    <div class="contact__form-field">
+        <div class="contact-wrapper">
+            <div class="contact">
+                <div class=contact__form-container>
+                    <h2>Если у вас остались вопросы, напишите нам:</h2>
+                    <form action="#" method="POST">
                         <label for="name">
                             Ваше имя
                         </label>
-                        <input type="text" name="name" id="name" placeholder="Иван">
-                    </div>
-                    <div class="contact__form-field">
+                        <div class="contact__form-field">
+                            <input type="text" name="name" id="name" placeholder="Иван">
+                        </div>
                         <label for="number">
                             Ваш телефон
                         </label>
-                        <input type="tel" name="number" id="number" placeholder="8 800 000 00 00">
-                    </div>
-                    <div class="contact__form-field">
-                        <input type="checkbox" name="check" id="check" checked>
-                        <label for="check">
-                            Даю согласие на обработку персональных данных
-                        </label>
-                    </div>
-                    <button type="submit">
-                        Получить консультацию
-                    </button>
-                    <div class="contact__info">
-                        В течении 30 минут, мы свяжемся с вами и поможем их решить
-                    </div>
-                </form>  
-            </div>
-            <div class="contact__image">
-                <img src=<%=require("./assets/contact-image.png")%> alt="contact-image">
+                        <div class="contact__form-field">
+                            <input type="tel" name="number" id="number" placeholder="8 800 000 00 00">
+                        </div>
+                        <div class="contact__form-field checkdiv">
+                            <input type="checkbox" name="check" id="check" checked>
+                            <label for="check">
+                                Даю согласие на обработку персональных данных
+                            </label>
+                        </div>
+                        <button type="submit">
+                            Получить консультацию
+                        </button>
+                        <div class="contact__info">
+                            В течение 30 минут, мы свяжемся с вами и поможем их решить
+                        </div>
+                    </form>  
+                </div>
+                <div class="contact__image">
+                    <img src=<%=require("./assets/contact-image.png")%> alt="contact-image">
+                </div>
             </div>
         </div>
-        <div class="main__advantages">
+        <div class="advantages">
             <h2>Преимущества строительства деревянных домов под ключ у нас</h2>
             <dl class="advantages__list">
                 <div class="advantages__list-item">
                     <dt>300+ <br> Домов</dt>
                     <dd>Мы строим по всей территории России и по праву можем назвать себя профессионалами своего дела.</dd>
                 </div>
-                <div class="advantages__list-item"></div>
+                <div class="advantages__list-item">
                     <dt>Команда <br> мастеров</dt>
                     <dd>Наш менеджер никогда не предложит купить то, что Вам не нужно или не подходит.</dd>
                 </div>
-                <div class="advantages__list-item"></div>
+                <div class="advantages__list-item">
                     <dt>Точные <br> цены</dt>
                     <dd>Они ни при каких обстоятельствах не изменяются, т.к не зависят ни от курса доллара, ни от курса евро.</dd>
                 </div>
-                <div class="advantages__list-item"></div>
+                <div class="advantages__list-item">
                     <dt>Индивидуальное <br> проектирование</dt>
                     <dd>Вы можете прислать нам на расчет свои проекты — мы учтем все Ваши пожелания и просьбы.</dd>
                 </div>
             </dl>
         </div>
-        <div class="main__reviews">
-            <h2>Видеоотзывы благодарных клиентов</h2>
-            <div class="reviews__list">
-                <div class="reviews__list-item">
-                    <img src=<%=require("./assets/review_1.png")%> alt="review-1">
-                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
-                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+        <div class="reviews-container">
+            <div class="scroll-left"></div>
+            <div class="reviews">
+                <h2>Видеоотзывы благодарных клиентов</h2>
+                <div class="reviews__list">
+                    <div class="reviews__list-item">
+                        <img src=<%=require("./assets/review_1.png")%> alt="review-1">
+                        <div class="reviews__list-item-title">Деревянный дом с мансардой</div>
+                        <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    </div>
+                    <div class="reviews__list-item">
+                        <img src=<%=require("./assets/review_2.png")%> alt="review-2">
+                        <div class="reviews__list-item-title">Деревянный дом с мансардой</div>
+                        <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    </div>
+                    <div class="reviews__list-item">
+                        <img src=<%=require("./assets/review_1.png")%> alt="review-3">
+                        <div class="reviews__list-item-title">Деревянный дом с мансардой</div>
+                        <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    </div>
+                    <div class="reviews__list-item">
+                        <img src=<%=require("./assets/review_2.png")%> alt="review-4">
+                        <div class="reviews__list-item-title">Деревянный дом с мансардой</div>
+                        <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    </div>
+                    <div class="reviews__list-item">
+                        <img src=<%=require("./assets/review_1.png")%> alt="review-5">
+                        <div class="reviews__list-item-title">Деревянный дом с мансардой</div>
+                        <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    </div>
+                    <div class="reviews__list-item">
+                        <img src=<%=require("./assets/review_2.png")%> alt="review-6">
+                        <div class="reviews__list-item-title">Деревянный дом с мансардой</div>
+                        <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
+                    </div>
                 </div>
-                <div class="reviews__list-item">
-                    <img src=<%=require("./assets/review_2.png")%> alt="review-2">
-                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
-                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
-                </div>
-                <div class="reviews__list-item">
-                    <img src=<%=require("./assets/review_1.png")%> alt="review-3">
-                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
-                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
-                </div>
-                <div class="reviews__list-item">
-                    <img src=<%=require("./assets/review_2.png")%> alt="review-4">
-                    <div class="review__list-item-title">Деревянный дом с мансардой</div>
-                    <p>Диаметр бревна 220мм, дом 10х10, Ленточный фундамент, балкон, Входная группа с козырьком.</p>
-                </div>
-            </div>
+            </div> 
+            <div class="scroll-right"></div>    
         </div>
     </div>
 </body>

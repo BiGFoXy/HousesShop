@@ -17,3 +17,21 @@ import './assets/about-image.png'
 import './assets/contact-image.png'
 import './assets/review_1.png'
 import './assets/review_2.png'
+import './assets/scroll-left.svg'
+import './assets/scroll-right.svg'
+import Scrollbar from 'smooth-scrollbar';
+
+let reviews = document.querySelector('.reviews__list');
+let scrollLeft = document.querySelector('.scroll-left');
+let scrollRight = document.querySelector('.scroll-right');
+
+scroll = Scrollbar.init(reviews);
+
+scrollLeft.onclick = function() {
+    scroll.scrollTo(scroll.scrollLeft - 300, 0, 1000)
+}
+
+scrollRight.onclick = function() {
+    scroll.scrollTo(scroll.scrollLeft + 300, 0, 1000)
+}
+
