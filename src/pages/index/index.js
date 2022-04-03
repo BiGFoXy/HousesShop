@@ -1,3 +1,4 @@
+require("../../components/components.js")
 import './index.scss'
 import './assets/arrow.svg'
 import './assets/index-bg.png'
