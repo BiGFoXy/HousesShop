@@ -1,7 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const pagesModule = require("./utils/pages.js")
-const to_pages = ["Index"];
+const to_pages = ["Index/index"];
 
 const pages = pagesModule.populateHtmlPlugins(to_pages);
 const points = pagesModule.populateEntryPoints(to_pages.map(element => {
@@ -13,7 +13,7 @@ module.exports = {
     entry: points,
     output: { 
         path: path.resolve(__dirname, 'dist'),
-        filename: '[name]/[name].[contenthash].js',
+        filename: '[name].[contenthash].js',
         clean: true,
     },
     devtool: 'source-map',
@@ -71,7 +71,7 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: "[name]/[name].css",
+            filename: "[name].css",
         }),
 
     ].concat(pages),
