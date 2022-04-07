@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="main">
-        <div class="index">
+        <div class="index container">
             <h1>Дома <br> под ключ</h1>
             <p class="index__description">Строительство деревянных домов и бань в Нижнем Новгороде</p>
             <p class="index__floating-text">Качественная обработка и не высокая цена <br> это реально</p>
@@ -27,7 +27,7 @@
                 <img src=<%=require("./assets/whatsapp-logo.svg") %> alt="whatsapp">
             </div>
         </div>
-        <div class="examples">
+        <div class="examples container">
             <h2>Наши объекты строительства домов под ключ</h2>
             <a class="examples__link-all"href="#">Смотреть все</a>
             <div class="examples__house-cards-container">
@@ -69,9 +69,9 @@
                 </div>
             </div>
         </div>
-        <div class="about">
+        <div class="about container">
             <h2>О компании</h2>
-            <div class="about__container">
+            <div class="about__content">
                 <div class="about__text">
                     <p>
                         ООО “Именитая изба” занимается профессиональным
@@ -95,10 +95,10 @@
                 <div class="about__images">
                     <img src=<%=require("./assets/about-image.png")%> alt="about-image">
                     <div class="about__image-selector-container">
-                        <input type="radio" name="about__image-selector" checked>
-                        <input type="radio" name="about__image-selector">
-                        <input type="radio" name="about__image-selector">
-                        <input type="radio" name="about__image-selector">
+                        <input type="radio" name="image-selector" checked>
+                        <input type="radio" name="image-selector">
+                        <input type="radio" name="image-selector">
+                        <input type="radio" name="image-selector">
                     </div>
                 </div>
                 <div class="about__video">
@@ -121,7 +121,7 @@
             </div> 
         </div>
         <div class="contact-wrapper">
-            <div class="contact">
+            <div class="contact container">
                 <div class=contact__form-container>
                     <h2>Если у вас остались вопросы, напишите нам:</h2>
                     <form action="#" method="POST">
@@ -156,7 +156,7 @@
                 </div>
             </div>
         </div>
-        <div class="advantages">
+        <div class="advantages container">
             <h2>Преимущества строительства деревянных домов под ключ у нас</h2>
             <dl class="advantages__list">
                 <div class="advantages__list-item">
@@ -177,9 +177,9 @@
                 </div>
             </dl>
         </div>
-        <div class="reviews-container">
+        <div class="reviews-wrapper">
             <div class="scroll-left"></div>
-            <div class="reviews">
+            <div class="reviews container">
                 <h2>Видеоотзывы благодарных клиентов</h2>
                 <div class="reviews__list">
                     <div class="reviews__list-item">

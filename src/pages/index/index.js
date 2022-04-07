@@ -28,10 +28,10 @@ let scrollRight = document.querySelector('.scroll-right');
 scroll = Scrollbar.init(reviews);
 
 scrollLeft.onclick = function() {
-    scroll.scrollTo(scroll.scrollLeft - 300, 0, 1000)
+    scroll.scrollTo(scroll.scrollLeft - 406, 0, 1000)
 }
 
 scrollRight.onclick = function() {
-    scroll.scrollTo(scroll.scrollLeft + 300, 0, 1000)
+    scroll.scrollTo(scroll.scrollLeft + 406, 0, 1000)
 }
 

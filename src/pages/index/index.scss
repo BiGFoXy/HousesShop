@@ -2,9 +2,9 @@ body {
     font-family: 'Roboto';
 }
 
-%page-block {
+.container {
     color: rgba(53, 51, 51, 0.9);
-    width: 1200px;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -36,7 +36,7 @@ body {
     }
 
     .index {
-        @extend %page-block;
+        
         background: url('./assets/index-bg.png') no-repeat 50% 100%;
         background-size: 1200px 669px;
         height: 1040px;      
@@ -123,7 +123,7 @@ body {
     }
 
     .examples {
-        @extend %page-block;
+        
         margin-top: 9px;
 
         h2 {
@@ -180,9 +180,9 @@ body {
     }
 
     .about {
-        @extend %page-block;
+        
 
-        &__container {
+        &__content {
             display: grid;
             grid-template-columns: 50% 50%;
             margin-top: 67px;
@@ -244,6 +244,10 @@ body {
                 input[type="radio"]:last-of-type {
                     margin-right: 0;
                 }
+
+                input[type="radio"]:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
@@ -253,7 +257,7 @@ body {
         background-color: #F9F9F9;
 
         .contact {
-            @extend %page-block;
+            
             display: flex;
             justify-content: space-between;
             &__form-container {
@@ -334,7 +338,7 @@ body {
     }
 
     .advantages {
-        @extend %page-block;
+        
 
         h2 {
             margin-left: auto;
@@ -374,14 +378,14 @@ body {
         }
     }
 
-    .reviews-container {
+    .reviews-wrapper {
         width: 100%;
         position: relative;
         overflow: auto;
         background-color: #353333;
 
         .reviews {
-            @extend %page-block;
+            
             margin-top: 113px; 
 
             
@@ -396,6 +400,10 @@ body {
 
                 &-item {
                     margin-right: 31px;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
 
                     &-title {
                         color: white;
