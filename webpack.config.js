@@ -1,7 +1,7 @@
 const path = require('path')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const pagesModule = require("./utils/pages.js")
-const to_pages = ["Index/index"];
+const to_pages = ["Index/index", "Produkciya/produkciya"];
 
 const pages = pagesModule.populateHtmlPlugins(to_pages);
 const points = pagesModule.populateEntryPoints(to_pages.map(element => {
