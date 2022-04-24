@@ -1,3 +1,4 @@
+require("../../components/components.js")
 import './index.scss'
 import './assets/logo.svg'
 import './assets/phoneIcon.svg'

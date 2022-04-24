@@ -2,3 +2,47 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.header {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 16px;
+    color: #353333;
+    width: 100%;
+    padding: 60px 160px 45px 120px;
+    &__nav {
+        border-bottom: 1px solid rgba(53, 51, 51, 0.3);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .nav__logo {
+            //margin-right: 60px;
+        }
+        .nav__buttons {
+            display: flex;
+            //align-items: center;
+            //margin-right: 130px;
+            .button {
+                margin-right: 40px;
+            }
+            .button:nth-child(5) {
+                margin-right: 20px;
+            }
+            .button:last-child {
+                margin-right: 0px;
+            }
+        }
+        .nav__phone {
+            line-height: 20px;
+            font-size: 22px;
+            justify-content: space-between;
+            display: flex;
+            //align-items: center;
+            .phone__icon {
+                margin-right: 11px;
+            }
+        }
+    }
+}
