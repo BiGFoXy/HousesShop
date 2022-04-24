@@ -22,33 +22,33 @@ body {
         }*/
         .nav__buttons {
             display: flex;
-            //align-items: center;
-            //margin-right: 130px;
             .button {
                 position: relative;
                 display: inline-block;
                 margin-right: 40px;
-                &__content {
+
+                .main {
                     display: none;
                     position: absolute;
                     background-color: #f1f1f1;
                     min-width: 344px;
                     box-shadow: -3px 3px 10px rgba(29, 27, 27, 0.14);
                     z-index: 1;
-                    a {
+
+                    &__content {
                         font-size: 18px;
                         line-height: 20px;
                         display: block;
                         padding: 12px 0px 12px 19px;
                     }
-                    a:hover {
+                    &__content:hover {
                         background-color: #725C44;
                         color: white;
                     }
 
                 }
                 //.button__drp:hover {
-                    .button__content{
+                    .main{
                         display: block;
                     }
                 //} 
@@ -65,7 +65,6 @@ body {
             font-size: 22px;
             justify-content: space-between;
             display: flex;
-            //align-items: center;
             .phone__icon {
                 margin-right: 11px;
             }
