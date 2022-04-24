@@ -40,6 +40,9 @@ body {
                         line-height: 20px;
                         display: block;
                         padding: 12px 0px 12px 19px;
+                        :hover .main {
+                            display: block;
+                        }
                     }
                     &__content:hover {
                         background-color: #725C44;
@@ -48,9 +51,7 @@ body {
 
                 }
                 //.button__drp:hover {
-                    .main{
-                        display: block;
-                    }
+                    
                 //} 
             }
             .button:nth-child(5) {
