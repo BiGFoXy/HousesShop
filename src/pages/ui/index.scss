@@ -3,6 +3,8 @@ body {
     padding: 0;
 }
 
+a {text-decoration: none;}
+
 .header {
     font-family: 'Roboto';
     font-style: normal;
@@ -12,6 +14,7 @@ body {
     color: #353333;
     width: 100%;
     padding: 0px 200px 0px 180px;
+    a:visited { text-decoration: none; color:#353333; }
 
     &__nav {
         border-bottom: 1px solid rgba(53, 51, 51, 0.3);
@@ -73,4 +76,93 @@ body {
             }
         }
     }
+}
+
+.footer {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: white;
+    background-color: #353333;
+    width: 100%;
+    
+
+    a:visited { text-decoration: none; color: #FFFFFFB2; }
+    
+    &__up {
+        display: flex;
+        justify-content: space-between;
+        padding: 21px 191px 28px 186px;
+        
+        .product__type {
+            color: rgba(255, 255, 255, 0.5);
+        }
+    
+
+        .contacts {
+            
+            .time {
+                width: 172px;
+                display: flex;
+                align-items: flex-start;
+                justify-content: space-between;
+
+                &__img {
+                    width: 21px;
+                    height: 21px;
+                }
+                &__text {
+                    width: 146px;
+                    height: 50px;
+                    line-height: 25px;
+                    color: rgba(255, 255, 255, 0.7);
+                }
+
+            }
+            .phone__number {
+                font-size: 22px;
+                line-height: 20px;
+
+            }
+            .email {
+                width: 147px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                color: rgba(255, 255, 255, 0.7);
+
+                &__text {
+                    font-size: 16px;
+                    line-height: 20px;
+
+                }
+                &__img {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    } 
+    &__low {
+        display: flex;
+        justify-content: space-between;
+        font-size: 16px;
+        line-height: 19px;
+        margin: 0px 199px 0px 199px;
+        padding-top: 11px;
+        padding-bottom: 29px;
+        border-top: 1px solid rgba(255, 255, 255, 0.3);;
+
+        .copyright {
+            width: 667px;
+            display: flex;
+            justify-content: space-between;
+
+            &__2 {
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+    }  
 }

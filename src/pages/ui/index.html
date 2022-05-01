@@ -12,13 +12,9 @@
             <div class="nav__buttons">
                 <div class="button">
                     <a class="button__drp" href="">Главная</a>
-                    <div class="button__content main">
-                        <a class="main__content" href="">Цена на срубы под баню</a>
-                        <a class="main__content" href="">Цена на оциллиндрованное бревно</a>
-                        <a class="main__content" href="">Цена на оциллиндрованное бревно</a>
-                        <a class="main__content" href="">Цена на оциллиндрованное бревно</a>
-                        <a class="main__content" href="">Цена на оциллиндрованное бревно</a>
-                    </div>
+                    <!--<div class="button__content main">
+    
+                    </div>-->
                 </div>
                 <div class="button">
                     <a class="button__drp" href="">Продукция</a>
@@ -79,49 +75,54 @@
     </header>
     
     <footer class="footer">
-        <a class="footer__logo" href=""><img class="logo" alt="Лесная изба" src=<%=require("./assets/logo.svg")%>></a>
-        <div class="footer__products products">
-            <ul class="products__list">
-                <li class="product">Дома</li>
-                <li class="product"><a href="">Из оцилиндрованного бревна</a></li>
-                <li class="product"><a href="">Из профилированного бруса</a></li>
-                <li class="product"><a href="">Из клееного бруса</a></li>
+        <div class="footer__up">
+            <a class="footer__logo" href=""><img class="logo" alt="Лесная изба" src=<%=require("./assets/logo.svg")%>></a>
+            <div class="footer__products products">
+                <ul class="products__list">
+                    <li class="product">Дома</li>
+                    <li><a class="product__type" href="">Из оцилиндрованного бревна</a></li>
+                    <li><a class="product__type" href="">Из профилированного бруса</a></li>
+                    <li><a class="product__type" href="">Из клееного бруса</a></li>
+                </ul>
+                <ul class="products__list">
+                    <li class="product">Бани</li>
+                    <li><a class="product__type" href="">Бани из бревна</a></li>
+                    <li><a class="product__type" href="">Бани из бруса</a></li>
+                </ul>
+            </div>
+            <ul class="footer__nav nav">
+                <li><a class="nav__button" href="">Главная</a></li>
+                <li><a class="nav__button" href="">Продукция</a></li>
+                <li><a class="nav__button" href="">Строительство</a></li>
+                <li><a class="nav__button" href="">Проектирование</a></li>
+                <li><a class="nav__button" href="">Галерея</a></li>
             </ul>
-            <ul class="products__list">
-                <li class="product">Бани</li>
-                <li class="product"><a href="">Бани из бревна</a></li>
-                <li class="product"><a href="">Бани из бруса</a></li>
-            </ul>
-        </div>
-        <nav class="footer__nav nav">
-            <a class="nav__button" href="">Главная</a>
-            <a class="nav__button" href="">Продукция</a>
-            <a class="nav__button" href="">Строительство</a>
-            <a class="nav__button" href="">Проектирование</a>
-            <a class="nav__button" href="">Галерея</a>
-        </nav>
-        <div class="footer__contacts contacts">
-            <p class="contacts__text">Контакты</p>
-            <div class="contacts__time time">
-                <img class="time__img" alt="clock" src=<%=require("./assets/clock.svg")%>>
-                <p class="time__text">
-                    Пн-Пт 9:00-18:00
-                    Сб-Вс выходной
-                </p>
+            <div class="footer__contacts contacts">
+                <p class="contacts__text">Контакты</p>
+                <div class="contacts__time time">
+                    <img class="time__img" alt="clock" src=<%=require("./assets/clock.svg")%>>
+                    <p class="time__text">
+                        Пн-Пт 9:00-18:00
+                        Сб-Вс выходной
+                    </p>
+                </div>
+                <p class="phone__number">+7 (910) 007 77 79</p>
+                <div class="contacts__emial email">
+                    <img class="email__img" alt="envelope" src=<%=require("./assets/envelope.svg")%>>
+                    <p class="email__text">izba-52@mail.ru</p>
+                </div>
+                <div class="contacts__sn sn">
+                    <a class="sn__link" href=""><img alt="vk.com" src=<%=require("./assets/vk.svg")%>></a>
+                    <a class="sn__link" href=""><img alt="yt.com" src=<%=require("./assets/yt.svg")%>></a>
+                    <a class="sn__link" href=""><img alt="wa.com" src=<%=require("./assets/wa.svg")%>></a>
+                </div>
             </div>
-            <p class="phone__number">+7 (910) 007 77 79</p>
-            <div class="contacts__emial email">
-                <img class="email__img" alt="envelope" src=<%=require("./assets/envelope.svg")%>>
-                <p class="email__text">izba-52@mail.ru</p>
-            </div>
-            <div class="contacts__sn sn">
-                <a class="sn__link" href=""><img alt="vk.com" src=<%=require("./assets/vk.svg")%>></a>
-                <a class="sn__link" href=""><img alt="yt.com" src=<%=require("./assets/yt.svg")%>></a>
-                <a class="sn__link" href=""><img alt="wa.com" src=<%=require("./assets/wa.svg")%>></a>
-            </div>
+            <a href="" class="footer__arrow"><img alt="vk.com" src=<%=require("./assets/arrow.svg")%>></a>
         </div>
         <div class="footer__low">
-            <p class="copyright">© 2020 Именитая изба- строительство деревянных домов и бань. Все права защищены</p>
+            <div class="copyright">
+                <p class="copyright__1">© 2020 Именитая изба- строительство деревянных домов и бань.<p class="copyright__2">Все права защищены.</p></p>
+            </div>
             <a class="agreement" href="">Пользовательское соглашение</a>
             <a class="agreement" href="">Политика конфиденциальности</a>
         </div>
