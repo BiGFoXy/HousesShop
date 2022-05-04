@@ -143,8 +143,27 @@ a {text-decoration: none;}
                     height: 25px;
                 }
             }
+            .sn {
+                width: 146px;
+                height: 34px;
+                &__link svg:hover {
+                    path {
+                        fill-opacity: 1;
+                    }
+                }
+            }
+            
         }
-    } 
+
+    
+    }
+
+    &__arrow svg:hover {
+        circle {
+            fill: white;
+        }
+    }
+
     &__low {
         display: flex;
         justify-content: space-between;
@@ -166,3 +185,6 @@ a {text-decoration: none;}
         }
     }  
 }
+
+
+
