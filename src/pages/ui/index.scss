@@ -95,19 +95,48 @@ a {text-decoration: none;}
         display: flex;
         justify-content: space-between;
         padding: 21px 191px 28px 186px;
-        
+
+        .product {
+            margin-top: 45px;
+        }
+
         .product__type {
+            padding-top: 9px;
+        }
+        
+        .product__type-l {
             color: rgba(255, 255, 255, 0.5);
+            padding-top: 9px;
+        }
+
+        .product__type-l:hover {
+            color: rgba(255, 255, 255, 1);
+            border-bottom: 1px solid #FFFFFF;
+            
+        }
+
+        .nav {
+            margin-top: 45px;
+           
+            &__button:not(:first-child) {
+                padding-top: 20px;
+            }
         }
     
 
         .contacts {
+            margin-top: 45px;
+
+            &__text {
+                padding-bottom: 6px;
+            }
             
             .time {
                 width: 172px;
                 display: flex;
                 align-items: flex-start;
                 justify-content: space-between;
+                padding-bottom: 23px;
 
                 &__img {
                     width: 21px;
@@ -121,16 +150,20 @@ a {text-decoration: none;}
                 }
 
             }
+
             .phone__number {
                 font-size: 22px;
                 line-height: 20px;
+                padding-bottom: 26px;
 
             }
+
             .email {
                 width: 147px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                padding-bottom: 29px;
                 color: rgba(255, 255, 255, 0.7);
 
                 &__text {
@@ -144,8 +177,15 @@ a {text-decoration: none;}
                 }
             }
             .sn {
-                width: 146px;
+                width: 142px;
                 height: 34px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &__link {
+                    
+                }
                 &__link svg:hover {
                     path {
                         fill-opacity: 1;
@@ -169,7 +209,7 @@ a {text-decoration: none;}
         justify-content: space-between;
         font-size: 16px;
         line-height: 19px;
-        margin: 0px 199px 0px 199px;
+        margin: 117px 199px 0px 199px;
         padding-top: 11px;
         padding-bottom: 29px;
         border-top: 1px solid rgba(255, 255, 255, 0.3);;
